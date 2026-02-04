@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Bảng giá dịch vụ - V MASTER</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .pricing-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      padding: 20px;
+    }
+    .pricing-card {
+      background: #ffffff;
+      border: 1px solid #dcdde1;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .pricing-card h2 {
+      font-size: 18px;
+      color: #0a3d62;
+      margin-bottom: 10px;
+    }
+    .pricing-card p {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+    .price {
+      font-size: 20px;
+      font-weight: bold;
+      color: #1e3799;
+      margin-bottom: 12px;
+    }
+    .cta-btn {
+      display: inline-block;
+      padding: 12px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      background-color: #c0392b; /* đỏ sẫm */
+      color: white;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .cta-btn:hover {
+      background-color: #e74c3c;
+    }
+    @media (min-width: 768px) {
+      .pricing-container {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Bảng giá dịch vụ pháp lý nhà đất</h1>
+  <p>Minh bạch – Không chi phí ẩn – Cam kết phục vụ đến khi hoàn tất thủ tục.</p>
+
+  <div class="pricing-container">
+    <div class="pricing-card">
+      <h2>Tư vấn pháp luật đất đai</h2>
+      <p>Giải đáp thắc mắc, hướng dẫn thủ tục theo Luật Đất đai.</p>
+      <div class="price">500.000 VNĐ</div>
+      <a href="tiep-nhan-ho-so.html" class="cta-btn">📩 Gửi hồ sơ ngay</a>
+    </div>
+
+    <div class="pricing-card">
+      <h2>Sang tên, chuyển nhượng</h2>
+      <p>Thực hiện thủ tục sang tên, chuyển nhượng minh bạch.</p>
+      <div class="price">2.000.000 VNĐ</div>
+      <p><small>Chưa bao gồm lệ phí nhà nước</small></p>
+      <a href="tiep-nhan-ho-so.html" class="cta-btn">📩 Gửi hồ sơ ngay</a>
+    </div>
+
+    <div class="pricing-card">
+      <h2>Công chứng hồ sơ</h2>
+      <p>Hỗ trợ công chứng, chứng thực theo biểu phí công chứng.</p>
+      <div class="price">1.000.000 VNĐ</div>
+      <a href="tiep-nhan-ho-so.html" class="cta-btn">📩 Gửi hồ sơ ngay</a>
+    </div>
+
+    <div class="pricing-card">
+      <h2>Giải quyết tranh chấp đất đai</h2>
+      <p>Tư vấn và hỗ trợ giải quyết tranh chấp theo quy định pháp luật.</p>
+      <div class="price">Thỏa thuận</div>
+      <p><small>Tùy mức độ phức tạp</small></p>
+      <a href="tiep-nhan-ho-so.html" class="cta-btn">📩 Nhận tư vấn miễn phí</a>
+    </div>
+  </div>
+</body>
+</html>

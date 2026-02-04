@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Liên hệ - V MASTER</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .contact-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 20px;
+    }
+    .contact-card {
+      background: #ffffff;
+      border: 1px solid #dcdde1;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .contact-icon {
+      font-size: 40px;
+      margin-bottom: 12px;
+      color: #1e3799;
+    }
+    .contact-card h2 {
+      font-size: 18px;
+      color: #0a3d62;
+      margin-bottom: 10px;
+    }
+    .contact-card p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+    .cta-btn {
+      display: inline-block;
+      padding: 12px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      background-color: #c0392b; /* đỏ sẫm */
+      color: white;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .cta-btn:hover {
+      background-color: #e74c3c;
+    }
+    @media (min-width: 768px) {
+      .contact-container {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Liên hệ V MASTER</h1>
+  <p>Chúng tôi luôn sẵn sàng hỗ trợ bạn – minh bạch, nhanh chóng, đúng pháp luật.</p>
+
+  <div class="contact-container">
+    <div class="contact-card">
+      <div class="contact-icon">📞</div>
+      <h2>Hotline</h2>
+      <p>0123-456-789</p>
+      <a href="tel:0123456789" class="cta-btn">📞 Gọi ngay</a>
+    </div>
+
+    <div class="contact-card">
+      <div class="contact-icon">💬</div>
+      <h2>Zalo</h2>
+      <p>Kết nối nhanh qua Zalo để được tư vấn miễn phí.</p>
+      <a href="https://zalo.me/0123456789" class="cta-btn">💬 Chat Zalo</a>
+    </div>
+
+    <div class="contact-card">
+      <div class="contact-icon">✉️</div>
+      <h2>Email</h2>
+      <p>contact@vmaster.vn</p>
+      <a href="mailto:contact@vmaster.vn" class="cta-btn">✉️ Gửi Email</a>
+    </div>
+
+    <div class="contact-card">
+      <div class="contact-icon">🏢</div>
+      <h2>Địa chỉ</h2>
+      <p>123 Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh</p>
+      <p><small>Thời gian làm việc: 8h00 – 17h00 (Thứ 2 – Thứ 6)</small></p>
+    </div>
+  </div>
+</body>
+</html>

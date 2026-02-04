@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Tiếp nhận hồ sơ - V MASTER</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    /* CTA cố định cuối màn hình mobile */
+    .cta-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #0a3d62;
+      display: flex;
+      justify-content: space-around;
+      padding: 12px;
+      z-index: 999;
+    }
+    .cta-bar a {
+      flex: 1;
+      margin: 0 5px;
+      text-align: center;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      color: white;
+      text-decoration: none;
+    }
+    .cta-send {
+      background-color: #1e3799; /* xanh đậm */
+    }
+    .cta-consult {
+      background-color: #c0392b; /* đỏ sẫm */
+    }
+    .trust-signals {
+      margin-top: 20px;
+      padding: 16px;
+      background: #ecf0f1;
+      border-radius: 8px;
+    }
+    .trust-signals ul {
+      list-style: none;
+      padding: 0;
+    }
+    .trust-signals li::before {
+      content: "✔️ ";
+    }
+  </style>
+</head>
+<body>
+  <h1>Tiếp nhận hồ sơ nhà đất – Nhanh – Đúng – An toàn pháp lý</h1>
+  <p>Chỉ cần gửi hồ sơ, chúng tôi xử lý toàn bộ phần còn lại.</p>
+
+  <h2>Danh sách hồ sơ cần chuẩn bị:</h2>
+  <ul>
+    <li>📄 Giấy chứng nhận quyền sử dụng đất</li>
+    <li>🧾 CMND/CCCD của các bên liên quan</li>
+    <li>📝 Hợp đồng chuyển nhượng / tặng cho / thừa kế</li>
+  </ul>
+
+  <form>
+    <label>Họ tên:</label>
+    <input type="text" name="hoten" required>
+
+    <label>Số điện thoại:</label>
+    <input type="tel" name="sdt" required>
+
+    <label>Email:</label>
+    <input type="email" name="email" required>
+
+    <label>Nội dung hồ sơ:</label>
+    <textarea name="hoso" required></textarea>
+  </form>
+
+  <div class="trust-signals">
+    <h2>Cam kết của V MASTER</h2>
+    <ul>
+      <li>Cam kết bảo mật hồ sơ</li>
+      <li>Không phát sinh chi phí ẩn</li>
+      <li>Hỗ trợ đến khi xong thủ tục</li>
+      <li>Phục vụ tại địa phương</li>
+    </ul>
+  </div>
+
+  <!-- CTA cố định cuối màn hình -->
+  <div class="cta-bar">
+    <a href="#" class="cta-send">📩 Gửi hồ sơ ngay</a>
+    <a href="tel:0123456789" class="cta-consult">📞 Nhận tư vấn miễn phí</a>
+  </div>
+</body>
+</html>
