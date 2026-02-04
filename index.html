@@ -3,44 +3,98 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dịch vụ giấy tờ nhà đất</title>
+  <title>Dịch vụ nhà đất</title>
 
-  <meta name="description" content="Dịch vụ pháp lý nhà đất – minh bạch – đúng luật" />
   <link rel="manifest" href="manifest.json" />
-  <link rel="stylesheet" href="ui/ui.css" />
+  <meta name="theme-color" content="#0d47a1" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: #f4f6f8;
+      color: #102a43;
+    }
+    header {
+      background: linear-gradient(135deg,#0d47a1,#08306b);
+      color: #fff;
+      padding: 24px;
+      text-align: center;
+    }
+    main {
+      padding: 20px;
+      max-width: 960px;
+      margin: auto;
+    }
+    .card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 16px;
+      border-left: 4px solid #0d47a1;
+      box-shadow: 0 6px 18px rgba(0,0,0,.08);
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      background: #0d47a1;
+      color: #fff;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .btn:active { opacity: .8; }
+  </style>
 </head>
 
 <body>
-  <header class="hero">
-    <h1>Dịch vụ giấy tờ nhà đất</h1>
-    <p>Vận hành minh bạch – chuẩn pháp lý</p>
-    <button onclick="openContact()">Liên hệ tư vấn</button>
-  </header>
 
-  <main>
-    <section class="services">
-      <h2>Dịch vụ</h2>
-      <div class="cards">
-        <div class="card">Sang tên – chuyển nhượng</div>
-        <div class="card">Hoàn công – sổ hồng</div>
-        <div class="card">Tư vấn pháp lý nhà đất</div>
-      </div>
-    </section>
+<header>
+  <h1>DỊCH VỤ NHÀ ĐẤT</h1>
+  <p>Pháp lý – Minh bạch – Chuẩn doanh nghiệp</p>
+</header>
 
-    <section class="trust">
-      <h2>Cam kết</h2>
-      <ul>
-        <li>✔ Đúng pháp luật</li>
-        <li>✔ Minh bạch chi phí</li>
-        <li>✔ Không phát sinh ẩn</li>
-      </ul>
-    </section>
-  </main>
+<main>
+  <div class="card">
+    <h2>Tư vấn giấy tờ</h2>
+    <p>Sổ đỏ, sang tên, hợp thửa, tách thửa.</p>
+    <a class="btn" onclick="sendRequest('tu-van')">Gửi yêu cầu</a>
+  </div>
 
-  <footer>
-    <p>© Dịch vụ nhà đất – PWA chuẩn Google</p>
-  </footer>
+  <div class="card">
+    <h2>Kiểm tra hồ sơ</h2>
+    <p>Đối soát pháp lý, tránh rủi ro.</p>
+    <a class="btn" onclick="sendRequest('kiem-tra')">Kiểm tra</a>
+  </div>
+</main>
 
-  <script src="ui/ui.js"></script>
+<script>
+/* ====== LOGIC APP (1 FILE) ====== */
+
+// register service worker
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js');
+}
+
+// API call
+async function sendRequest(type) {
+  try {
+    const res = await fetch("https://api.hstai777.vn/request", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        type,
+        source: "pwa-nha-dat",
+        ts: Date.now()
+      })
+    });
+    alert(res.ok ? "Đã gửi yêu cầu" : "Hệ thống bận");
+  } catch {
+    alert("Không có kết nối mạng");
+  }
+}
+</script>
+
 </body>
 </html>
