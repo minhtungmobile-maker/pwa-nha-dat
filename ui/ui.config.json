@@ -1,0 +1,63 @@
+﻿{
+  "app": {
+    "name": "Dịch vụ giấy tờ nhà đất",
+    "shortName": "Nhà Đất",
+    "description": "Nền tảng dịch vụ giấy tờ nhà đất – minh bạch, chuẩn pháp lý",
+    "language": "vi",
+    "direction": "ltr"
+  },
+
+  "branding": {
+    "themeColor": "#0b3c5d",
+    "backgroundColor": "#ffffff",
+    "logo": "/icons/icon-512.png",
+    "favicon": "/icons/favicon.ico"
+  },
+
+  "layout": {
+    "header": true,
+    "footer": true,
+    "navigation": "top",
+    "maxWidth": "1200px"
+  },
+
+  "pages": [
+    { "id": "home", "title": "Trang chủ", "path": "/" },
+    { "id": "services", "title": "Dịch vụ", "path": "/services" },
+    { "id": "workflow", "title": "Quy trình", "path": "/workflow" },
+    { "id": "legal", "title": "Pháp lý", "path": "/legal" },
+    { "id": "cases", "title": "Hồ sơ mẫu", "path": "/cases" },
+    { "id": "faq", "title": "Hỏi đáp", "path": "/faq" },
+    { "id": "contact", "title": "Liên hệ", "path": "/contact" }
+  ],
+
+  "forms": {
+    "enable": true,
+    "fields": [
+      "fullname",
+      "phone",
+      "email",
+      "serviceType",
+      "note"
+    ]
+  },
+
+  "uiPolicy": {
+    "readOnlyBrain": true,
+    "noAutoDecision": true,
+    "noAIExecution": true,
+    "humanConfirmRequired": true
+  },
+
+  "performance": {
+    "lazyLoadImages": true,
+    "prefetchPages": false,
+    "cacheUIAssets": true
+  },
+
+  "compliance": {
+    "gdpr": true,
+    "logging": "ui-only",
+    "noThirdPartyTracking": true
+  }
+}
